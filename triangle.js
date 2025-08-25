@@ -1,4 +1,4 @@
-
+//קליטת הנקודות
 function createTreangle(){
      function parsePoint(id){
         const val = document.getElementById(id).value;
@@ -16,7 +16,7 @@ function createTreangle(){
     window.location.href = "display.html";
 }
 
-
+//עבודה עם הקאנבה ליצירת המשולש
 var canvasElement = document.querySelector("#myCanvas");
 var ctx = canvasElement.getContext("2d");
 
@@ -32,23 +32,27 @@ if(!stored){
     const B = points.B;
     const C = points.C;
 
+     //יצירת מערכת צירים
     drawAxes(50,ctx);
 
+//יצירת משולש
     drawTriangle(A, B, C);
-
+//יחישוב זוויות לכל נקודה
     const angA = angleAtVertex(B,A,C);
     const angB = angleAtVertex(A,B,C);
     const angC = angleAtVertex(A,C,B);
 
-        
+     //יצירת הנקודה והערך של הזווית על המשולש
     drawVertexWithAngle(A,B,C,"A", angA);
     drawVertexWithAngle(B,A,C,"B", angB);
     drawVertexWithAngle(C,A,B,"C", angC);
 
+     // יצירת הקו של הזווית
     drawAngleArc(A,B,C,30);
     drawAngleArc(B,A,C,30); 
     drawAngleArc(C,A,B,30); 
 }
+
 
 
 function drawTriangle(A, B, C) {
@@ -186,4 +190,5 @@ function drawAxes(gridSize=50,ctx){
 
 function goBack() {
     window.location.href = "input.html";
+
 }
