@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>בניית משולש</title>
+  <link rel="stylesheet" href="input.css">
+
+</head>
+<body>
+    <h3> נבנה משולש ביחד</h3>
+    <h3> הזן 3 נקודות עבור המשולש:</h3>
+
+    <div class="point">
+        <h3>נקודה A</h3>
+        <label for="A">X,Y</label><br>
+        <input type="text" id="A" name="A" placeholder="100,50"><br>
+    </div>
+
+    <div class="point">
+        <h3>נקודה B</h3>
+        <label for="B">X,Y</label><br>
+        <input type="text" id="B" name="B" placeholder="200,300"><br>
+    </div>
+
+    <div class="point">
+        <h3>נקודה C</h3>
+        <label for="C">X,Y</label><br>
+        <input type="text" id="C" name="C" placeholder="400,150"><br>
+    </div>
+
+    <button onclick="createTreangle()">הצג משולש</button>
+
+    <script src="triangle.js"></script>
+
+</body>
